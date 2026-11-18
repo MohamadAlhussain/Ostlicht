@@ -179,6 +179,7 @@ export function ParallaxImage({
   amount = 9,
   preload = false,
   reveal = false,
+  curtain = "var(--color-ink)",
 }: {
   src: string;
   alt: string;
@@ -189,6 +190,8 @@ export function ParallaxImage({
   preload?: boolean;
   /** Bild öffnet sich zusätzlich wie ein Vorhang */
   reveal?: boolean;
+  /** Farbe des Vorhangs = Hintergrundfarbe der Sektion */
+  curtain?: string;
 }) {
   const frame = useRef<HTMLDivElement>(null);
   const inner = useRef<HTMLDivElement>(null);
@@ -198,7 +201,7 @@ export function ParallaxImage({
     const ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
       mm.add({ small: "(max-width: 767px)", large: "(min-width: 768px)" }, (c) => {
-        const a = c.conditions?.small ? amount * 0.5 : amount;
+        const a = c.conditions?.small ? amount * 0.85 : amount;
         gsap.fromTo(
           inner.current,
           { yPercent: -a },
@@ -210,17 +213,17 @@ export function ParallaxImage({
         );
       });
       if (reveal) {
-        gsap.fromTo(
-          frame.current,
-          { clipPath: "inset(18% 0% 18% 0%)" },
-          {
-            clipPath: "inset(0% 0% 0% 0%)",
-            ease: "none",
-            scrollTrigger: { trigger: frame.current, start: "top bottom", end: "top 25%", scrub: true },
-          },
+        // Vorhang: zwei Flächen fahren nach oben und unten weg, das Bild zoomt zurück.
+        // Nur transform/scale – der Browser muss nichts neu zeichnen.
+        const tl = gsap.timeline({ scrollTrigger: { trigger: frame.current, start: "top 82%", once: true } });
+        tl.to("[data-curtain]", { scaleY: 0, duration: 1.5, ease: "expo.inOut" }, 0).fromTo(
+          inner.current,
+          { scale: 1.3 },
+          { scale: 1, duration: 2.2, ease: "expo.out" },
+          0.15,
         );
       }
-    });
+    }, frame);
     return () => ctx.revert();
   }, [amount, reveal]);
 
@@ -233,6 +236,22 @@ export function ParallaxImage({
       >
         <Image src={src} alt={alt} fill sizes={sizes} preload={preload} className="object-cover" />
       </div>
+      {reveal && (
+        <>
+          <div
+            data-curtain
+            aria-hidden
+            className="absolute inset-x-0 top-0 h-[50.5%] origin-top will-change-transform"
+            style={{ background: curtain }}
+          />
+          <div
+            data-curtain
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 h-[50.5%] origin-bottom will-change-transform"
+            style={{ background: curtain }}
+          />
+        </>
+      )}
     </div>
   );
 }

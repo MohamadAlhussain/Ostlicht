@@ -57,6 +57,36 @@ html.lenis body {
   overscroll-behavior: contain;
 }
 
+/* Horizontale Projekt-Galerie, sobald sie fixiert wird (JS aktiv, Bewegung erlaubt) */
+.h-pinned {
+  height: 100svh;
+}
+.h-pinned [data-h-inner] {
+  padding-block: 0;
+}
+.h-pinned [data-h-scroller] {
+  overflow: visible;
+}
+.h-pinned [data-h-scroller] > div {
+  scroll-snap-type: none;
+}
+.h-pinned [data-h-bar] {
+  display: block;
+}
+
+/* Vorhang über Bildern: nur mit JS, ohne „Bewegung reduzieren“ */
+[data-curtain] {
+  display: none;
+}
+html.js [data-curtain] {
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-curtain] {
+    display: none;
+  }
+}
+
 /* Text, die per JS animiert wird, erst nach dem Split zeigen (ohne JS sofort sichtbar) */
 html.js [data-split] {
   visibility: hidden;

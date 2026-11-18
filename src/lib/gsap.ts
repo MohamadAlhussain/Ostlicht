@@ -8,6 +8,9 @@ import { useEffect, useLayoutEffect, type DependencyList, type RefObject } from 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger, SplitText);
   gsap.defaults({ ease: "expo.out", duration: 1.2 });
+  // Auf dem Handy ändert die ein-/ausfahrende Adressleiste die Höhe –
+  // ohne diese Einstellung würden fixierte Sektionen dabei springen.
+  ScrollTrigger.config({ ignoreMobileResize: true });
 }
 
 export { gsap, ScrollTrigger, SplitText };

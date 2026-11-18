@@ -26,6 +26,7 @@ export default function StudioPage() {
           className="mx-auto h-[60svh] max-w-[1600px] bg-ink-2 md:h-[85svh]"
           amount={10}
           preload
+          reveal
         />
       </div>
 
