@@ -1,0 +1,110 @@
+{
+  "atelierhaus-uckermark-2": {
+    "source": "atelierhaus-uckermark-2.png",
+    "width": 896,
+    "height": 1200,
+    "at": "2026-11-18T16:19:44.370Z"
+  },
+  "atelierhaus-uckermark-3": {
+    "source": "atelierhaus-uckermark-3.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:44.684Z"
+  },
+  "atelierhaus-uckermark": {
+    "source": "atelierhaus-uckermark.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:44.971Z"
+  },
+  "bibliothek-am-kanal-2": {
+    "source": "bibliothek-am-kanal-2.png",
+    "width": 896,
+    "height": 1200,
+    "at": "2026-11-18T16:19:45.190Z"
+  },
+  "bibliothek-am-kanal-3": {
+    "source": "bibliothek-am-kanal-3.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:45.399Z"
+  },
+  "bibliothek-am-kanal": {
+    "source": "bibliothek-am-kanal.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:45.651Z"
+  },
+  "haus-am-see-2": {
+    "source": "haus-am-see-2.png",
+    "width": 896,
+    "height": 1200,
+    "at": "2026-11-18T16:19:45.893Z"
+  },
+  "haus-am-see-3": {
+    "source": "haus-am-see-3.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:46.112Z"
+  },
+  "haus-am-see": {
+    "source": "haus-am-see.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:46.343Z"
+  },
+  "pavillon-havel-2": {
+    "source": "pavillon-havel-2.png",
+    "width": 896,
+    "height": 1200,
+    "at": "2026-11-18T16:19:46.516Z"
+  },
+  "pavillon-havel-3": {
+    "source": "pavillon-havel-3.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:46.721Z"
+  },
+  "pavillon-havel": {
+    "source": "pavillon-havel.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:46.917Z"
+  },
+  "speicher-spree-2": {
+    "source": "speicher-spree-2.png",
+    "width": 896,
+    "height": 1200,
+    "at": "2026-11-18T16:19:47.168Z"
+  },
+  "speicher-spree-3": {
+    "source": "speicher-spree-3.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:47.427Z"
+  },
+  "speicher-spree": {
+    "source": "speicher-spree.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:47.647Z"
+  },
+  "wohnhof-pankow-2": {
+    "source": "wohnhof-pankow-2.png",
+    "width": 896,
+    "height": 1200,
+    "at": "2026-11-18T16:19:47.902Z"
+  },
+  "wohnhof-pankow-3": {
+    "source": "wohnhof-pankow-3.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:48.164Z"
+  },
+  "wohnhof-pankow": {
+    "source": "wohnhof-pankow.png",
+    "width": 1376,
+    "height": 768,
+    "at": "2026-11-18T16:19:48.443Z"
+  }
+}
